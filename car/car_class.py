@@ -7,9 +7,18 @@ class Car:
 
     def accelerate(self):
         self.__speed += 5
+        return f"{self.__speed} km/h"
 
     def brake(self):
         self.__speed -= 5
+        return f"{self.__speed} km/h"
 
     def get_speed(self):
-        return self.__speed
+        self.__speed = self.__speed
+        return f"{self.__speed} km/h"
+
+    def get_year_model(self):
+        return self.__year_model
+
+    def get_make(self):
+        return self.__make
