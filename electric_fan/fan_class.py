@@ -19,7 +19,7 @@ class Fan:
     def get_color(self):
         return self.__color
 
-    def get_is_on(self, is_on):
+    def get_is_on(self):
         return self.__is_on
 
     def set_speed(self, speed):
