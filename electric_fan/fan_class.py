@@ -14,7 +14,7 @@ class Fan:
         return self.__speed
 
     def get_radius(self):
-        return self.__radius
+        return (f"{self.__radius} cm")
 
     def get_color(self):
         return self.__color
