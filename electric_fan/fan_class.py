@@ -8,3 +8,9 @@ class Fan:
         self.__is_on = is_on
         self.__radius = radius
         self.__color = color
+
+    def get_speed(self):
+        return self.__speed
+
+    def set_speed(self, speed):
+        self.__speed = speed
