@@ -11,31 +11,32 @@ def get_pet():
     return pet
 
 
-def car_accelerate(car, fan_one, pet):
+def car_accelerate(Car, Fan, Pet):
     while car.get_speed() != "25 km/h":
         car.accelerate()
         print(
             f"My {my_car.get_year_model()} {my_car.get_make()} has a speed of ({car.get_speed()} km/h)")
 
-    fan_one.set_is_on(True)
-    print(f"{pet.get_name()} is enjoying the {fan_one.get_color()} fan at {fan_one.get_speed()} speed while my {my_car.get_year_model()} {my_car.get_make()} is accelerating!")
+    fan_one.set_is_on(False)
+    print(f"{my_pet.get_name()} is enjoying the {fan_one.get_color()} fan at {fan_one.get_speed()} speed while my {my_car.get_year_model()} {my_car.get_make()} is accelerating!")
 
 
-def car_brake(car, fan_two):
+def car_brake(Car, Fan):
     while car.get_speed() != "0 km/h":
         car.brake()
         print(
             f"My {my_car.get_year_model()} {my_car.get_make()} has a speed of {car.get_speed()} km/h")
 
-    fan_two.set_is_on(False)
+    fan_two.set_is_on(True)
     print(f"my {my_car.get_year_model()} {my_car.get_make()} has stopped and my {fan_two.get_color()} fan is now off.")
 
 
 if __name__ == "__main__":
     my_pet = get_pet()
     my_car = Car(2026, "Ferrarri", 0)
-    fan_one = Fan("fast", False, 10.0, "yellow")
+    fan_one = Fan("fast", True, 10.0, "yellow")
     fan_two = Fan("medium", True, 5.0, "blue")
 
     print(
-        f"\n Initial speed of my {my_car.get_year_model()} {my_car.get_make()} is {my_car.get_speed()} km/h")
+        f"\n Initial speed of my {my_car.get_year_model()} {my_car.get_make()} is {my_car.get_speed()}")
+    print(f"The {fan_one.get_color()} fan is {fan_one.get_is_on()} for {my_pet.get_name()} to enjoy its {fan_one.get_speed()} speed while my {my_car.get_year_model()} {my_car.get_make()} is accelerating.")
