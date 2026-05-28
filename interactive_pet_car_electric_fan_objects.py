@@ -17,4 +17,13 @@ def car_accelerate(car, fan_one, pet):
             f"My {my_car.get_year_model()} {my_car.get_make()} has a speed of ({car.get_speed()} km/h)")
 
     fan_one.set_is_on(True)
-    print(f"{pet.get_name()} is enjoying the fan at {fan_one.get_speed()} speed while my {my_car.get_year_model()} {my_car.get_make()} is accelerating!")
+    print(f"{pet.get_name()} is enjoying the {fan_one.get_color()} fan at {fan_one.get_speed()} speed while my {my_car.get_year_model()} {my_car.get_make()} is accelerating!")
+
+def car_brake(car, fan_two):
+    while car.get_speed() != "0 km/h":
+        car.brake()
+        print(
+            f"My {my_car.get_year_model()} {my_car.get_make()} has a speed of {car.get_speed()} km/h")
+
+    fan_two.set_is_on(False)
+    print(f"my {my_car.get_year_model()} {my_car.get_make()} has stopped and my {fan_two.get_color()} fan is now off.")
