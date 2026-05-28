@@ -27,3 +27,9 @@ def car_brake(car, fan_two):
 
     fan_two.set_is_on(False)
     print(f"my {my_car.get_year_model()} {my_car.get_make()} has stopped and my {fan_two.get_color()} fan is now off.")
+
+if __name__ == "__main__":
+    my_pet=get_pet()
+    my_car=Car(2026, "Ferrarri", 0)
+    fan_one=Fan("fast", False, 10.0, "yellow")
+    fan_two=Fan("medium", True, 5.0, "blue")
